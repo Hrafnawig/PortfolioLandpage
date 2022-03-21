@@ -1,8 +1,9 @@
-import './css/App.css';
+import HomePage from './pages/HomePage';
 
 function Routes() {
   return (
     <div>
+      <HomePage/>
     </div>
   );
 }
