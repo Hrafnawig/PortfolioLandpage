@@ -1,3 +1,44 @@
-.title{
+.center{
   display: flex;
+  justify-content: center;
+  align-items:center;
 }
+.space{
+  font-family: 'Ubuntu';
+  color: #957554;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 52px 48px 25px 0px;
+}
+.logo{
+  padding:31px 0px 0px 0px;
+}
+.HotelsSearch{
+  background: #111111;
+  width: 1441px;
+  height: 119px;
+}
+.form{
+  padding: 19px 17px 19px 17px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.AvailableBut{
+
+}
+.spaceItem{
+  padding: 0px 0px 0px 27px;
+}
+.spaceCalendar{
+  padding: 0px 0px 0px 65px;
+}
+.spaceInputs{
+  padding: 0px 0px 0px 65px;
+}
+
