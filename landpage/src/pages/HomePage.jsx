@@ -1,11 +1,17 @@
 import React from 'react';
 import Title from './HomeComponents/Title';
-import OurHotel from './HomeComponents/OurHotel';
+import Navbar from './HomeComponents/HotelNavbar';
+import MainPic from './HomeComponents/Main';
+import Facilities from './HomeComponents/Facilities';
+import Rooms from './HomeComponents/Apartaments';
 const HomePage = () => {
     return (
         <div>
             <Title/>
-            <OurHotel/>
+            <Navbar/>
+            <MainPic/>
+            <Facilities/>
+            <Rooms/>
         </div>
     );
 };

@@ -30,7 +30,15 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .AvailableBut{
-
+  padding: 19px 18px 19px 18px;
+  background: #DFAA5B;
+  border-radius: 10px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
 }
 .spaceItem{
   padding: 0px 0px 0px 27px;
@@ -41,4 +49,94 @@
 .spaceInputs{
   padding: 0px 0px 0px 65px;
 }
-
+.InputRow{
+  display:grid;
+  grid-template-columns: repeat(4,212px);
+  grid-gap: 13px;
+}
+.MainPic{
+  width: 1441px;
+  height: 790px;
+  background-image: url("../../media/hotel.png");
+  margin-top: -13px;
+}
+@font-face { font-family: SegoeUI; src: url('../../fonts/SegoeUI.ttf'); }
+.centerColumn{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.welcomingPhrase{
+  width: 987px;
+  height: 106px;
+  margin-left: 20px;
+  margin-top: 130px;
+  font-family: SegoeUI;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 106px;
+  color: #FFFFFF;
+}
+.mainText{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.exploreBut{
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  background: #DFAA5B;
+  border-radius: 10px;
+  width: 371px;
+  height: 76px;
+  margin-top: 45px;
+}
+.facilities{
+  margin-top:-149px;
+  width: 1319px;
+  height: 289px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+.facText{
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 52px;
+  color: #957554;
+  padding: 0px 0px 20px 0px;
+}
+.facServices{
+  display:grid;
+  grid-template-columns: repeat(5,84px);
+  grid-gap: 141px;
+  padding: 40px 0px 0px 0px;
+}
+.facServiceTxt{
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #957554;
+}
+.roomsTxt{
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 52px;
+  color: #957554;
+  padding: 100px 0px 0px 0px;
+}
+.rooms{
+  display:grid;
+  grid-template-columns: repeat(2,630px);
+  grid-template-rows: repeat(2,500px);
+  grid-gap: 61px;
+}
