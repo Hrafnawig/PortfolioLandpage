@@ -7,21 +7,23 @@ const Rooms = () => {
             <div className={styles.rooms}>
                 <div className={`${styles.twinRoom} ${styles.centerColumn}`}>
                     <div className={styles.roomdesc}>Standard Twin Room</div>
-                    <div>Check Rates</div>
+                    <div className={`${styles.roomBut} ${styles.center}`}>Check Rates</div>
                 </div>
                 <div className={`${styles.standartRoom} ${styles.centerColumn}`}>
                     <div className={styles.roomdesc}>Standard Room</div>
-                    <div>Check Rates</div>
+                    <div className={`${styles.roomBut} ${styles.center}`}>Check Rates</div>
                 </div>
                 <div className={`${styles.viewRoom} ${styles.centerColumn}`}>
                     <div className={styles.roomdesc}>Standard View Room</div>
-                    <div>Check Rates</div>
+                    <div className={`${styles.roomBut} ${styles.center}`}>Check Rates</div>
                 </div>
                 <div className={`${styles.deluxeRoom} ${styles.centerColumn}`}>
                     <div className={styles.roomdesc}>Deluxe Room</div>
-                    <div>Check Rates</div>
+                    <div className={`${styles.roomBut} ${styles.center}`}>Check Rates</div>
                 </div>
             </div>
+            <div className={styles.bookTxt}>Get a room already!</div>
+            <div className={`${styles.bookBut} ${styles.centerColumn}`}>Book Now</div>
         </div>
     );
 };

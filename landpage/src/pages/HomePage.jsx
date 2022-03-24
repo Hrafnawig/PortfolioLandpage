@@ -4,6 +4,7 @@ import Navbar from './HomeComponents/HotelNavbar';
 import MainPic from './HomeComponents/Main';
 import Facilities from './HomeComponents/Facilities';
 import Rooms from './HomeComponents/Apartaments';
+import Footer from './HomeComponents/Footer';
 const HomePage = () => {
     return (
         <div>
@@ -12,6 +13,7 @@ const HomePage = () => {
             <MainPic/>
             <Facilities/>
             <Rooms/>
+            <Footer/>
         </div>
     );
 };
