@@ -1,0 +1,26 @@
+.facilities{
+  margin-top:-149px;
+  width: 1319px;
+  height: 289px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+.facText{
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 52px;
+  color: #957554;
+  padding: 0px 0px 20px 0px;
+}
+.facServices{
+  display:grid;
+  grid-template-columns: repeat(5,84px);
+  grid-gap: 141px;
+  padding: 40px 0px 0px 0px;
+}
+.facServiceTxt{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #957554;
+}

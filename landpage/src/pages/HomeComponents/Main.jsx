@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import './common.scss';
+import './main.scss';
 const MainPic = () => {
     return (
         <div className={styles.center}>

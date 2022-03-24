@@ -1,0 +1,59 @@
+.footer{
+  margin-top: 112px;
+  width: 1440px;
+  height: 469px;
+  background: #111111;
+  display:grid;
+  grid-template-columns: 263px 194px 371px;
+  grid-gap: 232px 251px;
+}
+.footerIMtxt{
+  margin-top: 68px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.footerItxt{
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footerTxt{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  padding: 0px 0px 28px 0px;
+}
+.subscribeText{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+  color: #FFFFFF;
+  margin-bottom:24px;
+}
+.subscribeInput{
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.5);
+  width: 371px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom:24px;
+}
+.subscribeBut{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  background: #DFAA5B;
+  border-radius: 10px;
+  width: 371px;
+  height: 75px;
+}

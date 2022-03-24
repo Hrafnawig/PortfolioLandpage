@@ -1,0 +1,38 @@
+.upperNavbar{
+  background: #111111;
+  width: 1441px;
+  height: 119px;
+}
+.InputRow{
+  display:grid;
+  grid-template-columns: repeat(4,212px);
+  grid-gap: 13px;
+}
+.form{
+  padding: 19px 17px 19px 17px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.AvailableBut{
+  padding: 19px 18px 19px 18px;
+  background: #DFAA5B;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+.spaceItem{
+  padding: 0px 0px 0px 27px;
+}
+.spaceCalendar{
+  padding: 0px 0px 0px 65px;
+}
+.spaceInputs{
+  padding: 0px 0px 0px 65px;
+}
