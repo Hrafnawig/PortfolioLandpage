@@ -1,35 +1,36 @@
 import React from 'react';
-import taxi from '../../media/taxi.png';
-import wifi from '../../media/wifi.png';
-import pool from '../../media/pool.png';
-import gym from '../../media/gym.png';
-import kitchen from '../../media/kitchen.png';
-import styles from './styles.module.scss';
+import taxi from '../../media/facilities/taxi.png';
+import wifi from '../../media/facilities/wifi.png';
+import pool from '../../media/facilities/pool.png';
+import gym from '../../media/facilities/gym.png';
+import kitchen from '../../media/facilities/kitchen.png';
+import './common.scss';
+import './facilities.scss';
 const Facilities = () => {
     return (
-        <div className={styles.center}>
-            <div className={`${styles.facilities} ${styles.centerColumn}`}>
-                <div className={styles.facText}>Facilities</div>
-                <div className={styles.facServices}>
-                    <div className={styles.centerColumn}>
+        <div className='center'>
+            <div className='facilities centerColumn'>
+                <div className='facText'>Facilities</div>
+                <div className='facServices'>
+                    <div className='centerColumn'>
                         <div><img src={kitchen}/></div>
-                        <div className={styles.facServiceTxt}>Kitchen</div>
+                        <div className='facServiceTxt'>Kitchen</div>
                     </div>
-                    <div className={styles.centerColumn}>
+                    <div className='centerColumn'>
                         <div><img src={pool}/></div>
-                        <div className={styles.facServiceTxt}>Pool</div>
+                        <div className='facServiceTxt'>Pool</div>
                     </div>
-                    <div className={styles.centerColumn}>
+                    <div className='centerColumn'>
                         <div><img src={wifi}/></div>
-                        <div className={styles.facServiceTxt}>Wifi</div>
+                        <div className='facServiceTxt'>Wifi</div>
                     </div>
-                    <div className={styles.centerColumn}>
+                    <div className='centerColumn'>
                         <div><img src={gym}/></div>
-                        <div className={styles.facServiceTxt}>Gym</div>
+                        <div className='facServiceTxt'>Gym</div>
                     </div>
-                    <div className={styles.centerColumn}>
+                    <div className='centerColumn'>
                         <div><img src={taxi}/></div>
-                        <div className={styles.facServiceTxt}>Taxi</div>
+                        <div className='facServiceTxt'>Taxi</div>
                     </div>
                 </div>
             </div>

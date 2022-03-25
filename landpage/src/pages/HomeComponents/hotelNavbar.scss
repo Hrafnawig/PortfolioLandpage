@@ -5,7 +5,7 @@
 }
 .InputRow{
   display:grid;
-  grid-template-columns: repeat(4,212px);
+  grid-template-columns: repeat(3,192px) 202px;
   grid-gap: 13px;
 }
 .form{
@@ -31,7 +31,7 @@
   padding: 0px 0px 0px 27px;
 }
 .spaceCalendar{
-  padding: 0px 0px 0px 65px;
+  padding: 0px 0px 0px 45px;
 }
 .spaceInputs{
   padding: 0px 0px 0px 65px;

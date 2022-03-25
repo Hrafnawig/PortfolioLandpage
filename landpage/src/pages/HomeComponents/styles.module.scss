@@ -54,12 +54,7 @@
   grid-template-columns: repeat(4,212px);
   grid-gap: 13px;
 }
-.MainPic{
-  width: 1441px;
-  height: 790px;
-  background-image: url("../../media/hotel.png");
-  margin-top: -13px;
-}
+
 @font-face { font-family: SegoeUI; src: url('../../fonts/SegoeUI.ttf'); }
 .centerColumn{
   display: flex;
@@ -140,18 +135,7 @@
   grid-template-rows: repeat(2,500px);
   grid-gap: 61px;
 }
-.twinRoom{
-  background-image: url("../../media/twinRoom.png");
-}
-.standartRoom{
-  background-image: url("../../media/standartRoom.png");
-}
-.viewRoom{
-  background-image: url("../../media/viewRoom.png");
-}
-.deluxeRoom{
-  background-image: url("../../media/DeluxeRoom.png");
-}
+
 .roomdesc{
   margin-right: 3px;
   margin-top: 240px;

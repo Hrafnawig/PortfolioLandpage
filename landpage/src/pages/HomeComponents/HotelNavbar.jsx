@@ -1,18 +1,19 @@
 import React from 'react';
-import arrow from '../../media/arrow.png';
-import calendar from '../../media/calendar.png';
-import styles from './styles.module.scss';
+import arrow from '../../media/hotelNavbar/arrow.png';
+import calendar from '../../media/hotelNavbar/calendar.png';
+import './common.scss';
+import './hotelNavbar.scss'
 const Navbar = () => {
     return (
-            <div className={styles.center}>
-                <div className={`${styles.HotelsSearch} ${styles.center} ${styles.InputRow}`}>
-                    <div className={`${styles.form} ${styles.center}`}>Select a City <div className={styles.spaceItem}>
+            <div className='center'>
+                <div className='InputRow center upperNavbar'>
+                    <div className='form center'>Select a City <div className='spaceItem'>
                         <img src={arrow}/></div></div>
-                    <div className={`${styles.form} ${styles.center}`}>Check In <div className={styles.spaceCalendar}>
+                    <div className='form center'>Check In <div className='spaceCalendar'>
                         <img src={calendar}/></div></div>
-                    <div className={`${styles.form} ${styles.center}`}>Check Out <div className={styles.spaceCalendar}>
+                    <div className='form center'>Check Out <div className='spaceCalendar'>
                         <img src={calendar}/></div></div>
-                    <div className={`${styles.AvailableBut} ${styles.center}`}>Check Availability</div>
+                    <div className='AvailableBut center'>Check Availability</div>
                 </div>
             </div>
     );
