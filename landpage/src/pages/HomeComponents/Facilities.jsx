@@ -9,7 +9,7 @@ import './facilities.scss';
 const Facilities = () => {
     return (
         <div className='center'>
-            <div className='facilities centerColumn'>
+            <div id='facilities' className='facilities centerColumn'>
                 <div className='facText'>Facilities</div>
                 <div className='facServices'>
                     <div className='centerColumn'>

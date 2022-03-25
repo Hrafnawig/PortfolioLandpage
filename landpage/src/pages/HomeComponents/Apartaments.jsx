@@ -3,7 +3,7 @@ import './common.scss';
 import './apartaments.scss';
 const Rooms = () => {
     return (
-        <div className='centerColumn'>
+        <div id='rooms' className='centerColumn'>
          <div className='roomsTxt'>Rooms & Rates</div>
             <div className='rooms'>
                 <div className='twinRoom centerColumn'>
