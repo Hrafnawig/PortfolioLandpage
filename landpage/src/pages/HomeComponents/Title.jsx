@@ -5,6 +5,9 @@ import './title.scss';
 import './common.scss'
 const Title = () => {
     const [clicked, setClick] = React.useState(false)
+    // if(window.location.reload){
+    //     window.location.replace("http://localhost:3000/")
+    // } freezes webpage
     return (
         <div>
             <div className='center'><img className='logo' src={logo}/></div>
@@ -25,7 +28,7 @@ const Title = () => {
                     <div className='space'><img onClick={()=>setClick(true)} src={search}/></div>
                 </div>
             </div>
-            <div className={clicked? 'hidden' : undefined}> Search everything!</div>
+            <div className={clicked? 'hidden' : undefined}> Search everything! </div>
         </div>
     );
 };
