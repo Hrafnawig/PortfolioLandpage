@@ -5,11 +5,8 @@ import './title.scss';
 import './common.scss'
 const Title = () => {
     const [clicked, setClick] = React.useState(false)
-    // if(window.location.reload){
-    //     window.location.replace("http://localhost:3000/")
-    // } freezes webpage
     return (
-        <div>
+        <div id="title">
             <div className='center'><img className='logo' src={logo}/></div>
             <div className='center'>
                 <div className='center'>
