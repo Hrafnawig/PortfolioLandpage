@@ -17,6 +17,20 @@
   line-height: 23px;
   color: rgba(0, 0, 0, 0.5);
 }
+.form:hover{
+  outline: solid grey;
+}
+.dropMenu{
+  margin-bottom: 5px;
+}
+.dropMenuGlobal{
+  margin-top: -30px;
+  margin-bottom: 15px;
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
 .AvailableBut{
   padding: 19px 18px 19px 18px;
   background: #DFAA5B;
