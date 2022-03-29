@@ -4,17 +4,19 @@ import {
     Route,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Available from './pages/AvailablePage';
 
 function Router() {
     return (
-    <div>
-        <BrowserRouter>
-            <Routes>
-                    <Route path='/' element={<HomePage/>}  />
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<HomePage/>}/>
+                    <Route path='/available' element={<Available/>}/>
                 </Routes>
-        </BrowserRouter>
-    </div>
-  );
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default Router;
