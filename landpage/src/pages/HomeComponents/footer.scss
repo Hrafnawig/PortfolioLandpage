@@ -29,6 +29,13 @@
   color: #FFFFFF;
   padding: 0px 0px 28px 0px;
 }
+.footerTxt:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footerTxt:active{
+  color: lightgrey;
+}
 .subscribeText{
   font-weight: 500;
   font-size: 30px;
@@ -50,7 +57,6 @@
 .subscribeBut{
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
   color: #FFFFFF;
   background: #DFAA5B;
   border-radius: 10px;

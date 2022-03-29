@@ -3,6 +3,7 @@ import logo from '../../media/footer/image 1.png'
 import './common.scss';
 import './footer.scss';
 const Footer = () => {
+    const [clicked, setClick]= React.useState(false)
     return (
         <div className='center'>
          <div className='centerColumn footer'>
@@ -20,8 +21,14 @@ const Footer = () => {
              </div>
              <div>
                  <div className='subscribeText'>Subscribe for Offers</div>
-                 <div className='center subscribeInput'>Email Address</div>
-                 <div className='center subscribeBut'>Subscribe  Now</div>
+                 <input
+                     className={clicked? 'hidden' : 'center subscribeInput'}
+                     name="search"
+                     placeholder="               Email Address!"
+                     type="search"
+                 />
+                 <div className={clicked? 'hidden' : 'center subscribeBut'} onClick={()=>{setClick(true)}}>Subscribe  Now</div>
+                 <div className={clicked? 'subscribeText': 'hidden'}>You already our subscriber!</div>
              </div>
          </div>
         </div>
