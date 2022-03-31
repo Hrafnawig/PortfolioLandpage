@@ -12,13 +12,19 @@ const Available = () => {
         });
     }, []);
     if (!res) return null;
-        return (
+    for(let i of res.data){
+        if(data.dateIn>i.in){
+            console.log(i)
+        }
+    }
+ console.log(data.dateIn>null)
+    return (
             <div>
                 {data.city}
                 {res.data[0].price}
                 {Moment(data.dateIn).format('DD MMM')}{Moment(data.dateOut).format('DD MMM')}
             </div>
-        );
+    );
 };
 
 export default Available;
