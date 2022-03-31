@@ -8,6 +8,7 @@ import Available from './pages/AvailablePage';
 import Explore from './pages/ExplorePage';
 import Rates from './pages/Rates';
 import Book from './pages/Book';
+import React from "react";
 
 function Router() {
     return (

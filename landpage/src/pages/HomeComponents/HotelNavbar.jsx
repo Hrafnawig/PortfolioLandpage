@@ -16,6 +16,11 @@ const Navbar = () => {
     const [dateOut, setDateOut] = React.useState(new Date())
     const [dIstatus, startMachine] = React.useState(false)
     const [dOstatus, startMac] = React.useState(false)
+    const data = {
+        city,dateIn,dateOut
+    };
+    sessionStorage.setItem("availability", JSON.stringify(data));
+
     const ChangeCityAndHide =(city) =>{
         setCity(city);
         setClick(0);
@@ -69,7 +74,9 @@ const Navbar = () => {
                     {dOstatus ? Moment(dateOut).format('DD MMM'): 'Check Out' }
                     <div className='spaceCalendar'>
                         <img src={calendar}/></div></div>
-                <Link to= "/available"><div className='AvailableBut center'>Check Availability</div></Link>
+                <Link to= "/available">
+                    <div className='AvailableBut center'>Check Availability</div>
+                </Link>
             </div>
             <div className='InputRow dropMenuGlobal'>
                 <div className={clicked === 1 ? 'centerColumn city' : 'hidden'}>
