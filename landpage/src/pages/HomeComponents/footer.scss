@@ -54,6 +54,12 @@
   border-radius: 10px;
   margin-bottom:24px;
 }
+.subscribeInput:hover, .subscribeBut:hover{
+  outline: solid grey;
+}
+.subscribeBut:active{
+  color: grey;
+}
 .subscribeBut{
   font-weight: 500;
   font-size: 24px;
