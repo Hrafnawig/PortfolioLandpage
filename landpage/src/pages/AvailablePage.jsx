@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import axios from 'axios';
-import Moment from "moment";
 import './secondaryPages.scss'
 import {Link} from "react-router-dom";
 
@@ -26,7 +25,11 @@ const Available = () => {
                 {availableRooms.map((value) => {
                     return <div className="raw">
                         <div className="txt">{value.city} {value.type} {value.price}</div>
-                        <Link to='/book'><div className="btn">Book this room!</div></Link>
+                        <Link to='/book'>
+                            <div className="btn" onClick={()=>{sessionStorage.setItem("chosenRoom",value.id)}}>
+                                Book this room!
+                            </div>
+                        </Link>
                     </div>
                 })}
             </div>

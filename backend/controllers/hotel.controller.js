@@ -23,3 +23,13 @@ module.exports.HotelBook = async (req, res, next) => {
         next(err);
     }
 };
+module.exports.getHotelById = async (req, res, next) => {
+    try {
+        const {  params: { id } } = req;
+        const room = await db.Hotel.findByPk(id);
+        res.send({ room });
+    } catch (err) {
+        next(err);
+    }
+};
+

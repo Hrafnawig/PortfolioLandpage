@@ -2,8 +2,22 @@ import React from 'react';
 import logo from '../../media/footer/image 1.png'
 import './common.scss';
 import './footer.scss';
+
 const Footer = () => {
     const [clicked, setClick]= React.useState(false)
+    const [email, changeEmail]=React.useState('')
+    const [attention, upAttention] =React.useState(false)
+    console.log(email)
+    const subscribe=()=>{
+     if(email!==''){
+         setClick(true)
+         upAttention(false)
+     }
+     else{
+         upAttention(true)
+     }
+    }
+
     return (
         <div className='center'>
          <div className='centerColumn footer'>
@@ -22,12 +36,14 @@ const Footer = () => {
              <div>
                  <div className='subscribeText'>Subscribe for Offers</div>
                  <input
-                     className={clicked? 'hidden' : 'center subscribeInput'}
+                     className={clicked? 'hidden' : `center subscribeInput ${attention? 'warn'  : ''}` }
                      name="search"
                      placeholder="               Email Address!"
                      type="search"
+                     onChange={event => changeEmail(event.target.value)}
                  />
-                 <div className={clicked? 'hidden' : 'center subscribeBut'} onClick={()=>{setClick(true)}}>Subscribe  Now</div>
+                 <div className={attention? 'warning'  : 'hidden'}>You should provide email!</div>
+                 <div className={clicked? 'hidden' : 'center subscribeBut'} onClick={subscribe}>Subscribe  Now</div>
                  <div className={clicked? 'subscribeText': 'hidden'}>You already our subscriber!</div>
              </div>
          </div>
