@@ -17,7 +17,11 @@ const Rates = () => {
             {res.data.map((value) => {
                 return <div className="raw">
                     <div className="txt">{value.city} {value.type} {value.price}</div>
-                    <Link to='/book'><div className="btn">Book this room!</div></Link>
+                    <Link to='/book'>
+                        <div className="btn" onClick={()=>{sessionStorage.setItem("chosenRoom",value.id)}}>
+                        Book this room!
+                        </div>
+                    </Link>
                 </div>
             })}
         </div>

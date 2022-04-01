@@ -7,7 +7,6 @@ const Footer = () => {
     const [clicked, setClick]= React.useState(false)
     const [email, changeEmail]=React.useState('')
     const [attention, upAttention] =React.useState(false)
-    console.log(email)
     const subscribe=()=>{
      if(email!==''){
          setClick(true)

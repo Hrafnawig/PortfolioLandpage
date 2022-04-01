@@ -26,7 +26,7 @@ const Available = () => {
                     return <div className="raw">
                         <div className="txt">{value.city} {value.type} {value.price}</div>
                         <Link to='/book'>
-                            <div className="btn" onClick={()=>{sessionStorage.setItem("chosenRoom",value.id)}}>
+                            <div className="btn" onClick={()=>{sessionStorage.setItem("AchosenRoom",value.id)}}>
                                 Book this room!
                             </div>
                         </Link>
