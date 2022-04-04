@@ -15,7 +15,7 @@ const Available = () => {
     if (!res) return null;
     const availableRooms = [];
     for(let i of res.data){
-        if(data.dateIn>i.in && data.dateOut>i.out && data.city===i.city){
+        if(data.dateIn.toString()>i.in.toString() && data.dateOut.toString()>i.out.toString() && data.city===i.city){
                 availableRooms.push(i)
         }
     }

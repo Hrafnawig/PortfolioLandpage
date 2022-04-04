@@ -100,6 +100,9 @@ const Book = () => {
                     No available rooms! Search another room or set another date!
                 </div>
             </div>
+            <div className={!valid&&choosed?  'centerColumn': 'hidden' }>
+
+            </div>
              <CustomPopup
                onClose={popupCloseHandler}
                show={visibility}>
