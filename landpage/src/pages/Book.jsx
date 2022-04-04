@@ -20,7 +20,11 @@ const Book = () => {
     const [dateIn,setIn] = React.useState(new Date())
     const [dateOut,setOut] = React.useState(new Date())
     const [price, setPrice] = React.useState(0)
-    const [confirm,setConfirm] = React.useState(false)
+    const [id,setId] = React.useState(0)
+    const [confirm,setConfirm] = React.useState(undefined)
+    if(confirm==='OK'){
+        window.location.href = '/';
+    }
 
     useEffect(() => {
         axios.get('http://localhost:3000/').then((response) => {
@@ -43,18 +47,32 @@ const Book = () => {
             }
         }
     }
+
     const searchRoom= ()=>{
         findRoom();
-        console.log(searchedRoom[0])
         if(searchedRoom[0]){
             setVisibility(!visibility)
             setWarn(false)
             setPrice(searchedRoom[0].price)
+            setId(searchedRoom[0].id)
         }
         else{
             setWarn(true)
         }
     }
+
+    const BookRoom=(id)=>{
+        console.log(id)
+            axios.post(`http://localhost:3000/book`,{
+                inB:dateIn,
+                outB:dateOut,
+                roomId:id
+            }).then((response) => {
+                if(response)
+                setConfirm(response.statusText);
+            });
+    }
+
     console.log(`choosed ${choosed}`, ` valid ${valid}` )
     return (
         <div className="center">
@@ -88,7 +106,7 @@ const Book = () => {
                  <div className='centerColumn'>
                      <div className='bigTxt'>Price of this room - {price}</div>
                      <div className='bigTxt'>Book?</div>
-                     <div className='center btn'>Confirm</div>
+                     <div className='center btn' onClick={()=>{BookRoom(id)}}>Confirm</div>
                  </div>
              </CustomPopup>
         </div>

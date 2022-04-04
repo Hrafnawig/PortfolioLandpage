@@ -13,9 +13,10 @@ module.exports.HotelBook = async (req, res, next) => {
             inB,outB, roomId
         } } = req;
         const val={
-            in : inB,
-            out : outB
+            in : new Date(inB),
+            out : new Date(outB)
         }
+        console.log(val)
         //2022-03-31
         const book = await db.Hotel.update(val,{where:{id:roomId}});
         res.send({ success: book});
