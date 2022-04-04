@@ -17,7 +17,6 @@ module.exports.HotelBook = async (req, res, next) => {
             out : new Date(outB)
         }
         console.log(val)
-        //2022-03-31
         const book = await db.Hotel.update(val,{where:{id:roomId}});
         res.send({ success: book});
     } catch (err) {
