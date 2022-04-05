@@ -8,7 +8,7 @@ import './HomeComponents/footer.scss'
 
 const Book = () => {
     Moment.locale('en');
-    let chosenRoom = sessionStorage.getItem("chosenRoom");
+    let chosenRoom = parseInt(sessionStorage.getItem("chosenRoom"));
     let ValidatedRoom = sessionStorage.getItem("AchosenRoom");
     const [visibility, setVisibility] = React.useState(false);
     const [showWarn, setWarn] = React.useState(false);
@@ -48,6 +48,23 @@ const Book = () => {
         }
     }
 
+    const checkRoom=()=>{
+        for(let i of res.data){
+            if(chosenRoom===i.id && dateIn.toString()>i.in.toString() &&
+                dateOut.toString()>i.out.toString()){
+                setVisibility(!visibility)
+                setPrice(i.price)
+                setId(i.id)
+            }
+        }
+        if(chosenRoom===id){
+            setWarn(false)
+        }
+        else{
+            setWarn(true)
+        }
+    }
+
     const searchRoom= ()=>{
         findRoom();
         if(searchedRoom[0]){
@@ -62,7 +79,6 @@ const Book = () => {
     }
 
     const BookRoom=(id)=>{
-        console.log(id)
             axios.post(`http://localhost:3000/book`,{
                 inB:dateIn,
                 outB:dateOut,
@@ -101,7 +117,13 @@ const Book = () => {
                 </div>
             </div>
             <div className={!valid&&choosed?  'centerColumn': 'hidden' }>
-
+                <div className='bigTxt'>Enter in and out date</div>
+                <Calendar className='txt' onChange={setIn} value={dateIn}/>
+                <Calendar className='txt' onChange={setOut} value={dateOut}/>
+                <div className='btn' onClick={()=>{checkRoom()}}>Check</div>
+                <div className={showWarn? 'warning'  : 'hidden'}>
+                    This room is unavailable! Set another date!
+                </div>
             </div>
              <CustomPopup
                onClose={popupCloseHandler}
