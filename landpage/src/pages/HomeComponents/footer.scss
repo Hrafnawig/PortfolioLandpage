@@ -1,6 +1,6 @@
 .footer{
   margin-top: 112px;
-  width: 1440px;
+  width: 100%;
   height: 469px;
   background: #111111;
   display:grid;
@@ -74,4 +74,10 @@
 }
 .warn{
   outline:solid red;
+}
+
+@media screen and (max-width: 1441px) {
+  .footer{
+    width: 1440px;
+  }
 }

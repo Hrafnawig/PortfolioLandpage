@@ -1,6 +1,6 @@
 .upperNavbar{
   background: #111111;
-  width: 1441px;
+  width: 100%;
   height: 119px;
 }
 .InputRow{
@@ -61,4 +61,11 @@
 }
 .spaceInputs{
   padding: 0px 0px 0px 65px;
+}
+
+@media screen and (max-width: 1441px) {
+  .upperNavbar{
+    background: #111111;
+    width: 1441px;
+  }
 }
