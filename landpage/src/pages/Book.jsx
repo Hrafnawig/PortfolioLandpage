@@ -9,7 +9,7 @@ import './HomeComponents/footer.scss'
 const Book = () => {
     Moment.locale('en');
     let chosenRoom = parseInt(sessionStorage.getItem("chosenRoom"));
-    let ValidatedRoom = sessionStorage.getItem("AchosenRoom");
+    let ValidatedRoom = parseInt(sessionStorage.getItem("AchosenRoom"));
     const [visibility, setVisibility] = React.useState(false);
     const [showWarn, setWarn] = React.useState(false);
     const [choosed,setTrue] = React.useState(!!chosenRoom||!!ValidatedRoom);
@@ -32,6 +32,7 @@ const Book = () => {
         });
     }, []);
     if (!res) return null;
+    console.log(chosenRoom)
 
     const popupCloseHandler = (e) => {
         setVisibility(e);
@@ -41,8 +42,8 @@ const Book = () => {
     const findRoom=()=>{
         for(let i of res.data){
             if(city===i.city && type===i.type &&
-                dateIn.toString()>i.in.toString() &&
-                dateOut.toString()>i.out.toString()){
+                new Date(dateIn)>new Date(i.in)
+                && new Date(dateOut)>new Date(i.out)){
                 searchedRoom.push(i)
             }
         }
@@ -50,8 +51,7 @@ const Book = () => {
 
     const checkRoom=()=>{
         for(let i of res.data){
-            if(chosenRoom===i.id && dateIn.toString()>i.in.toString() &&
-                dateOut.toString()>i.out.toString()){
+            if(chosenRoom===i.id && new Date(dateIn)>new Date(i.in) && new Date(dateOut)>new Date(i.out)){
                 setVisibility(!visibility)
                 setPrice(i.price)
                 setId(i.id)
@@ -78,6 +78,12 @@ const Book = () => {
         }
     }
 
+    const preBook=()=>{
+        setVisibility(!visibility)
+        setId(ValidatedRoom)
+        setPrice(res.data[ValidatedRoom].price)
+    }
+
     const BookRoom=(id)=>{
             axios.post(`http://localhost:3000/book`,{
                 inB:dateIn,
@@ -89,10 +95,8 @@ const Book = () => {
             });
     }
 
-    console.log(`choosed ${choosed}`, ` valid ${valid}` )
     return (
         <div className="center">
-            {chosenRoom} {ValidatedRoom}
             <div className={choosed? 'hidden' : 'centerColumn' }>
                 <div className='bigTxt'>Enter city, type of room, in and out date</div>
                 <input
@@ -124,6 +128,9 @@ const Book = () => {
                 <div className={showWarn? 'warning'  : 'hidden'}>
                     This room is unavailable! Set another date!
                 </div>
+            </div>
+            <div className={valid?  'centerColumn': 'hidden' }>
+                <div className='btn' onClick={()=>{preBook()}}>Book</div>
             </div>
              <CustomPopup
                onClose={popupCloseHandler}
