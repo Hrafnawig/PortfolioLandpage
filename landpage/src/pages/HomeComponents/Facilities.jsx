@@ -6,6 +6,7 @@ import gym from '../../media/facilities/gym.png';
 import kitchen from '../../media/facilities/kitchen.png';
 import './common.scss';
 import './facilities.scss';
+
 const Facilities = () => {
     return (
         <div className='center'>

@@ -81,3 +81,76 @@
     width: 1440px;
   }
 }
+@media screen and (max-width: 360px) {
+  .footer{
+    margin-top: 112px;
+    width: 100%;
+    height: 769px;
+    background: #111111;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+  }
+  .footerTxt{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 8px;
+    color: #FFFFFF;
+    padding: 0px 0px 28px 0px;
+  }
+  .footerIMtxt{
+    margin-top:50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+  .footerItxt{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: auto;
+  }
+  .subscribeText{
+    margin-top:140px;
+    margin-left:40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom:24px;
+  }
+  .subscribeInput{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.5);
+    width: 271px;
+    height: 45px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom:24px;
+  }
+  .subscribeBut{
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #DFAA5B;
+    border-radius: 10px;
+    width: 271px;
+    height: 45px;
+  }
+  .unique{
+    margin-left: 60px;
+  }
+  .distance{
+    margin-bottom:30px;
+    margin-top:20px;
+  }
+  .upperBlock{
+    margin-top:40px;
+  }
+}

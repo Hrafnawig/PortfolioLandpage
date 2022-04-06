@@ -25,3 +25,34 @@
   line-height: 28px;
   color: #957554;
 }
+
+@media screen and (max-width: 360px) {
+  .facServices{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column
+  }
+  .facilities{
+    margin-top:auto;
+    width: auto;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 0px;
+  }
+  .facText{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 52px;
+    color: #957554;
+    padding: 0px 0px 20px 0px;
+  }
+  .facServiceTxt{
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    color: #957554;
+  }
+
+}

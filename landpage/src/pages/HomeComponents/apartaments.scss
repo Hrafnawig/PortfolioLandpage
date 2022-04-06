@@ -66,3 +66,48 @@
   line-height: 28px;
   color: #FFFFFF;
 }
+
+@media screen and (max-width: 360px) {
+  .twinRoom{
+    background-size: 320px 300px;
+    background-image: url("../../media/apartaments/twinRoom.png");
+    width:20rem;
+    height:300px;
+  }
+  .roomBut{
+    margin-top: 180px;
+    width: 144px;
+    height: 46px;
+    background: #DFAA5B;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+  .roomsTxt{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 52px;
+    color: #957554;
+    padding: 100px 0px 56px 0px;
+  }
+  .bookTxt{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 52px;
+    color: #957554;
+    padding: 114px 0px 38px 0px;
+  }
+  .bookBut{
+    margin-top: 30px;
+    width: 218px;
+    height: 46px;
+    background: #DFAA5B;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+}
