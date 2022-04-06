@@ -11,6 +11,7 @@
 }
 body{
   font-family: 'Ubuntu';
+  margin: 0
 }
 a{
   text-decoration: none;
@@ -24,7 +25,5 @@ input{
 }
 
 @media screen and (max-width: 360px) {
-  .center{
-    flex-direction: column;
-  }
+
 }
